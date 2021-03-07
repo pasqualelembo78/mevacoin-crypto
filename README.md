@@ -1,10 +1,9 @@
 ![image](https://user-images.githubusercontent.com/34389545/35821974-62e0e25c-0a70-11e8-87dd-2cfffeb6ed47.png)
 
-# TurtleCoin: Standalone Cryptography Library
+# Kryptokrona: Standalone Cryptography Library
 
-[![NPM](https://nodei.co/npm/turtlecoin-crypto.png?downloads=true&stars=true)](https://nodei.co/npm/turtlecoin-crypto/)
 
-![Prerequisite](https://img.shields.io/badge/node-%3E%3D6-blue.svg) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/turtlecoin/turtlecoin-crypto/graphs/commit-activity) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-yellow.svg)](https://github.com/turtlecoin/turtlecoin-crypto/blob/master/LICENSE) [![Twitter: TurtlePay](https://img.shields.io/twitter/follow/_TurtleCoin.svg?style=social)](https://twitter.com/_TurtleCoin)
+![Prerequisite](https://img.shields.io/badge/node-%3E%3D6-blue.svg) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/turtlecoin/turtlecoin-crypto/graphs/commit-activity) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-yellow.svg)](https://github.com/turtlecoin/turtlecoin-crypto/blob/master/LICENSE)
 
 #### Master Build Status
 [![Build Status](https://github.com/turtlecoin/turtlecoin-crypto/workflows/CI%20Build%20Tests/badge.svg?branch=master)](https://github.com/turtlecoin/turtlecoin-crypto/actions)
@@ -12,7 +11,7 @@
 #### Development Build Status
 [![Build Status](https://github.com/turtlecoin/turtlecoin-crypto/workflows/CI%20Build%20Tests/badge.svg?branch=development)](https://github.com/turtlecoin/turtlecoin-crypto/actions)
 
-This repository contains the necessary files to compile the cryptography library used within [TurtleCoin](https://turtlecoin.lol) as a standalone library that can be included in various other projects in a variety of development environments, including:
+This repository contains the necessary files to compile the cryptography library used within kryptokrona as a standalone library that can be included in various other projects in a variety of development environments, including:
 
 * Node.js >= 6.x
 * C++
@@ -42,7 +41,7 @@ Read very careful if you want this to work right the first time.
 ### Installation
 
 ```bash
-npm install turtlecoin-crypto
+npm install kryptokrona-crypto
 ```
 
 ### Intialization
@@ -50,20 +49,20 @@ npm install turtlecoin-crypto
 #### TypeScript
 
 ```javascript
-import { Crypto } from 'turtlecoin-crypto';
-const TurtleCoinCrypto = new Crypto();
+import { Crypto } from 'kryptokrona-crypto';
+const kryptokronaCrypto = new Crypto();
 ```
 
 #### CommonJS
 
 ```javascript
-const Crypto = require('turtlecoin-crypto').Crypto
-const TurtleCoinCrypto = new Crypto()
+const Crypto = require('kryptokrona-crypto').Crypto
+const kryptokronaCrypto = new Crypto()
 ```
 
 #### Documentation
 
-You can find the full TypeScript/JS documentation for this library [here](https://crypto.turtlecoin.dev).
+You can find the full TypeScript/JS documentation for this library [here](https://crypto.kryptokrona.dev).
 
 ## C++ Library
 
@@ -84,8 +83,8 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
 sudo apt-get update
 sudo apt-get install aptitude -y
 sudo aptitude install -y build-essential git cmake
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/kryptokrona/kryptokrona-crypto
+cd kryptokrona-crypto
 mkdir build
 cd build
 cmake ..
@@ -119,8 +118,8 @@ sudo aptitude install -y -o Aptitude::ProblemResolver::SolutionCost='100*cancele
 sudo aptitude install build-essential clang-6.0 libstdc++-7-dev git cmake
 export CC=clang-6.0
 export CXX=clang++-6.0
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/kryptokrona/kryptokrona-crypto
+cd kryptokrona-crypto
 mkdir build
 cd build
 cmake ..
@@ -129,7 +128,7 @@ make -j
 
 The following library files will be created in the `build` folder:
 
-* `libturtlecoin-crypto-static.a`
+* `libkryptokrona-crypto-static.a`
 
 ##### Generic Linux
 
@@ -139,8 +138,8 @@ If you want to use clang, ensure you set the environment variables `CC` and `CXX
 See the ubuntu instructions for an example.
 
 ```bash
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/kryptokrona/kryptokrona-crypto
+cd kryptokrona-crypto
 mkdir build
 cd build
 cmake ..
@@ -164,8 +163,8 @@ which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/H
 brew install --force cmake boost llvm
 export CC=/usr/local/opt/llvm/bin/clang
 export CXX=/usr/local/opt/llvm/bin/clang++
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/kryptokrona/kryptokrona-crypto
+cd kryptokrona-crypto
 mkdir build
 cd build
 cmake ..
@@ -174,7 +173,7 @@ make
 
 The following library files will be created in the `build` folder:
 
-* `libturtlecoin-crypto-static.a`
+* `libkryptokrona-crypto-static.a`
 
 #### Windows
 
@@ -187,7 +186,7 @@ The following library files will be created in the `build` folder:
 
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
 ```
-cd <your_turtlecoin-crypto_directory>
+cd <your_kryptokrona-crypto_directory>
 mkdir build
 cd build
 set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%
@@ -215,8 +214,8 @@ You will need the following packages:
 ### Compiling
 
 ```bash
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/kryptokrona/kryptokrona-crypto
+cd kryptokrona-crypto
 source ./build_js.sh
 ```
 
