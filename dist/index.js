@@ -33,6 +33,17 @@ const moduleVars = {
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 // eslint-disable-next-line no-extend-native
+let toVectorString = (array) => {
+    if (!moduleVars.crypto.VectorString) {
+        throw new Error('VectorString unavailable');
+    }
+
+    const arr = new moduleVars.crypto.VectorString();
+
+    array.map(elem => arr.push_back(elem));
+
+    return arr;
+};
 /**
  * A class containing the TurtleCoin cryptographic primitive methods that wraps
  * the Node.js native module, the WASM binary, or native JS implementations
@@ -1331,7 +1342,7 @@ function tryRunFunc(...args) {
             else if (moduleVars.crypto[func]) {
                 for (let i = 0; i < args.length; i++) {
                     if (Array.isArray(args[i])) {
-                        args[i] = args[i].toVectorString();
+                        args[i] = toVectorString(args[i]);
                     }
                 }
                 try {
