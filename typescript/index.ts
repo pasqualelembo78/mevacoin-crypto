@@ -497,7 +497,8 @@ export class Crypto {
      */
     public async generateKeyDerivation (public_key: string, private_key: string): Promise<string> {
         if (!await this.checkKey(public_key)) {
-            throw new Error('Invalid public key found');
+            //If someone sends an invalid public key, ignore it and just hash it
+            public_key = await this.cn_fast_hash(public_key)
         }
         if (!await this.checkScalar(private_key)) {
             throw new Error('Invalid private key found');
