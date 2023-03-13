@@ -29,17 +29,14 @@ const moduleVars: IModuleSettings = {
 /**
  * @ignore
  */
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// eslint-disable-next-line no-extend-native
-let toVectorString = (array) => {
+let toVectorString = (input: any) => {
     if (!moduleVars.crypto.VectorString) {
         throw new Error('VectorString unavailable');
     }
 
     const arr = new moduleVars.crypto.VectorString();
 
-    array.map(elem => arr.push_back(elem));
+    input.map((elem: any) => arr.push_back(elem));
 
     return arr;
 };
