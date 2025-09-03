@@ -1,7 +1,7 @@
 {
-  "name": "kryptokrona-crypto",
+  "name": "mevacoin-crypto",
   "version": "1.0.1",
-  "description": "Node C++ Addon for Kryptokrona Cryptographic Functions",
+  "description": "Node C++ Addon for Mevacoin Cryptographic Functions",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
@@ -22,17 +22,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kryptokrona/kryptokrona-crypto.git"
+    "url": "git+https://github.com/pasqualelembo78/mevacoin-crypto.git"
   },
   "bugs": {
-    "url": "https://github.com/kryptokrona/kryptokrona-crypto/issues"
+    "url": "https://github.com/pasqualelembo78/mevacoin-crypto/issues"
   },
   "engines": {
     "node": ">=10"
   },
   "engineStrict": true,
-  "homepage": "https://kryptokrona.se",
-  "author": "The Kryptokrona Developers",
+  "homepage": "https://mevacoin.com",
+  "author": "MevaCoin",
   "license": "GPL-3.0",
   "dependencies": {
     "bindings": "^1.5.0",
